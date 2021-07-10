@@ -9,7 +9,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  List<Reference> references;
+  List<Reference> references = [];
 
   @override
   void initState() {
@@ -28,25 +28,13 @@ class _HomeViewState extends State<HomeView> {
           children: [
             Expanded(
               flex: 4,
-              child: references == null
-                  ? Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 40),
-                          child: LinearProgressIndicator(),
-                        ),
-                        Text('Fetching records from Firebase')
-                      ],
+              child: references.isEmpty
+                  ? Center(
+                      child: Text('No File uploaded yet'),
                     )
-                  : references.isEmpty
-                      ? Center(
-                          child: Text('No File uploaded yet'),
-                        )
-                      : CloudRecordListView(
-                          references: references,
-                        ),
+                  : CloudRecordListView(
+                      references: references,
+                    ),
             ),
             Expanded(
               flex: 2,
