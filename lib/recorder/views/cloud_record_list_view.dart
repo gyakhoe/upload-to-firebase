@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class CloudRecordListView extends StatefulWidget {
   final List<Reference> references;
   const CloudRecordListView({
-    Key key,
-    @required this.references,
+    Key? key,
+    required this.references,
   }) : super(key: key);
 
   @override
@@ -14,9 +14,9 @@ class CloudRecordListView extends StatefulWidget {
 }
 
 class _CloudRecordListViewState extends State<CloudRecordListView> {
-  bool isPlaying;
-  AudioPlayer audioPlayer;
-  int selectedIndex;
+  bool? isPlaying;
+  late AudioPlayer audioPlayer;
+  int? selectedIndex;
 
   @override
   void initState() {

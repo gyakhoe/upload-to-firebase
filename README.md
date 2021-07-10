@@ -1,16 +1,16 @@
 # upload_to_firebase
 
-A new Flutter project.
+## Information
 
-## Getting Started
+1. This code is last updated on 10th July 2021
+2. This repo is a flutter porject
+3. This project conts a voice recording app, that allows play the recorded video and upload into firebase storage
+4. Uploaded clip then will be fetched from firebase storage and displayed into the application, where it could be played again.
 
-This project is a starting point for a Flutter application.
+## Config
+1. Firebase configuration 
+2. Firebase rule setup for storage
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Additional Info
+1. Updated to dart null safety
+2. Tested on physical iOS device only

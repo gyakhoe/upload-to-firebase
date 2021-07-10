@@ -3,29 +3,29 @@ import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_audio_recorder/flutter_audio_recorder.dart';
+import 'package:flutter_audio_recorder2/flutter_audio_recorder2.dart';
 import 'package:path_provider/path_provider.dart';
 
 class FeatureButtonsView extends StatefulWidget {
   final Function onUploadComplete;
   const FeatureButtonsView({
-    Key key,
-    @required this.onUploadComplete,
+    Key? key,
+    required this.onUploadComplete,
   }) : super(key: key);
   @override
   _FeatureButtonsViewState createState() => _FeatureButtonsViewState();
 }
 
 class _FeatureButtonsViewState extends State<FeatureButtonsView> {
-  bool _isPlaying;
-  bool _isUploading;
-  bool _isRecorded;
-  bool _isRecording;
+  late bool _isPlaying;
+  late bool _isUploading;
+  late bool _isRecorded;
+  late bool _isRecording;
 
-  AudioPlayer _audioPlayer;
-  String _filePath;
+  late AudioPlayer _audioPlayer;
+  late String _filePath;
 
-  FlutterAudioRecorder _audioRecorder;
+  late FlutterAudioRecorder2 _audioRecorder;
 
   @override
   void initState() {
@@ -93,7 +93,7 @@ class _FeatureButtonsViewState extends State<FeatureButtonsView> {
       widget.onUploadComplete();
     } catch (error) {
       print('Error occured while uplaoding to Firebase ${error.toString()}');
-      Scaffold.of(context).showSnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Error occured while uplaoding'),
         ),
@@ -143,26 +143,24 @@ class _FeatureButtonsViewState extends State<FeatureButtonsView> {
   }
 
   Future<void> _startRecording() async {
-    final bool hasRecordingPermission =
-        await FlutterAudioRecorder.hasPermissions;
-    if (hasRecordingPermission) {
+    final bool? hasRecordingPermission =
+        await FlutterAudioRecorder2.hasPermissions;
+
+    if (hasRecordingPermission ?? false) {
       Directory directory = await getApplicationDocumentsDirectory();
       String filepath = directory.path +
           '/' +
           DateTime.now().millisecondsSinceEpoch.toString() +
           '.aac';
       _audioRecorder =
-          FlutterAudioRecorder(filepath, audioFormat: AudioFormat.AAC);
+          FlutterAudioRecorder2(filepath, audioFormat: AudioFormat.AAC);
       await _audioRecorder.initialized;
       _audioRecorder.start();
       _filePath = filepath;
       setState(() {});
     } else {
-      Scaffold.of(context).showSnackBar(SnackBar(
-        content: Center(
-          child: Text('Please enable recording permission'),
-        ),
-      ));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Center(child: Text('Please enable recording permission'))));
     }
   }
 }

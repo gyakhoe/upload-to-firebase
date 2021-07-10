@@ -1,45 +1,47 @@
 PODS:
   - audioplayers (0.0.1):
     - Flutter
-  - Firebase/CoreOnly (7.3.0):
-    - FirebaseCore (= 7.3.0)
-  - Firebase/Storage (7.3.0):
+  - Firebase/CoreOnly (8.0.0):
+    - FirebaseCore (= 8.0.0)
+  - Firebase/Storage (8.0.0):
     - Firebase/CoreOnly
-    - FirebaseStorage (~> 7.3.0)
-  - firebase_core (0.7.0):
-    - Firebase/CoreOnly (= 7.3.0)
+    - FirebaseStorage (~> 8.0.0)
+  - firebase_core (1.3.0):
+    - Firebase/CoreOnly (= 8.0.0)
     - Flutter
-  - firebase_storage (7.0.0):
-    - Firebase/Storage (= 7.3.0)
+  - firebase_storage (9.0.0):
+    - Firebase/Storage (= 8.0.0)
     - firebase_core
     - Flutter
-  - FirebaseCore (7.3.0):
-    - FirebaseCoreDiagnostics (~> 7.0)
-    - GoogleUtilities/Environment (~> 7.0)
-    - GoogleUtilities/Logger (~> 7.0)
-  - FirebaseCoreDiagnostics (7.4.0):
-    - GoogleDataTransport (~> 8.0)
-    - GoogleUtilities/Environment (~> 7.0)
-    - GoogleUtilities/Logger (~> 7.0)
-    - nanopb (~> 2.30907.0)
-  - FirebaseStorage (7.3.0):
-    - FirebaseCore (~> 7.0)
-    - GTMSessionFetcher/Core (~> 1.4)
+  - FirebaseCore (8.0.0):
+    - FirebaseCoreDiagnostics (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Logger (~> 7.4)
+  - FirebaseCoreDiagnostics (8.3.0):
+    - GoogleDataTransport (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Logger (~> 7.4)
+    - nanopb (~> 2.30908.0)
+  - FirebaseStorage (8.0.0):
+    - FirebaseCore (~> 8.0)
+    - GTMSessionFetcher/Core (~> 1.5)
   - Flutter (1.0.0)
-  - flutter_audio_recorder (0.5.4):
+  - flutter_audio_recorder2 (0.0.1):
     - Flutter
-  - GoogleDataTransport (8.2.0):
-    - nanopb (~> 2.30907.0)
-  - GoogleUtilities/Environment (7.2.0):
+  - GoogleDataTransport (9.0.1):
+    - GoogleUtilities/Environment (~> 7.2)
+    - nanopb (~> 2.30908.0)
     - PromisesObjC (~> 1.2)
-  - GoogleUtilities/Logger (7.2.0):
+  - GoogleUtilities/Environment (7.4.3):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (7.4.3):
     - GoogleUtilities/Environment
-  - GTMSessionFetcher/Core (1.5.0)
-  - nanopb (2.30907.0):
-    - nanopb/decode (= 2.30907.0)
-    - nanopb/encode (= 2.30907.0)
-  - nanopb/decode (2.30907.0)
-  - nanopb/encode (2.30907.0)
+  - GTMSessionFetcher/Core (1.6.1)
+  - nanopb (2.30908.0):
+    - nanopb/decode (= 2.30908.0)
+    - nanopb/encode (= 2.30908.0)
+  - nanopb/decode (2.30908.0)
+  - nanopb/encode (2.30908.0)
   - path_provider (0.0.1):
     - Flutter
   - PromisesObjC (1.2.12)
@@ -49,7 +51,7 @@ DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_storage (from `.symlinks/plugins/firebase_storage/ios`)
   - Flutter (from `Flutter`)
-  - flutter_audio_recorder (from `.symlinks/plugins/flutter_audio_recorder/ios`)
+  - flutter_audio_recorder2 (from `.symlinks/plugins/flutter_audio_recorder2/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
 
 SPEC REPOS:
@@ -73,28 +75,28 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_storage/ios"
   Flutter:
     :path: Flutter
-  flutter_audio_recorder:
-    :path: ".symlinks/plugins/flutter_audio_recorder/ios"
+  flutter_audio_recorder2:
+    :path: ".symlinks/plugins/flutter_audio_recorder2/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
 
 SPEC CHECKSUMS:
   audioplayers: 455322b54050b30ea4b1af7cd9e9d105f74efa8c
-  Firebase: 26223c695fe322633274198cb19dca8cb7e54416
-  firebase_core: dd7e6c86c29138bd0d9baf6a6414eedf1e76e63a
-  firebase_storage: 554b8ce9192bfe0bd35f63da42d0d1f6ae819ccc
-  FirebaseCore: 4d3c72622ce0e2106aaa07bb4b2935ba2c370972
-  FirebaseCoreDiagnostics: 3770093ac4f2be4590fa03cfa1d3a6e5602d4557
-  FirebaseStorage: 5002b1895bfe74a5ce92ad54f966e6162d0da2e5
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_audio_recorder: eb998d4e75e59b39d9e3ca1818a5e0f3a82f5836
-  GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
-  GoogleUtilities: d866834472f1324d080496bc67ab3ce5d0d46027
-  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
-  nanopb: 59221d7f958fb711001e6a449489542d92ae113e
+  Firebase: 73c3e3b216ec1ecbc54d2ffdd4670c65c749edb1
+  firebase_core: cda81ae37eda6df2bc2d16027fda527987c4bd33
+  firebase_storage: 915a6f20a4d114cdbac3b93eecce045e5b40eff3
+  FirebaseCore: 3f09591d51292843e2a46f18358d60bf4e996255
+  FirebaseCoreDiagnostics: 7e873baabcfaa9512f538554ae4fa0817aaafbdb
+  FirebaseStorage: 61bcd27880fa17362f68be67d3683d04bfd7b1c7
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  flutter_audio_recorder2: 0eda9d0c791d9d093e6f5f07df414d34edec4eda
+  GoogleDataTransport: 04c3e9a480bbcaa2ec3f5d27f1cdeb6a92f20c8d
+  GoogleUtilities: 45dbb24a7f351d69d0a601482b39ad6c32e30dab
+  GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
+  nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
